@@ -2,10 +2,9 @@
 Blackjack game in Python 3.7 using object oriented programming
 
 ## Output
- ____________________________ 
-|			                         |
-|  **Welcome to BlackJack**  |
-|____________________________|
+
+### | Welcome to BlackJack |
+
 
 Total chips available are 200
 How much money do you wanna bet?199
