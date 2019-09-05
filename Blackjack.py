@@ -102,3 +102,18 @@ def hit_or_stand(deck,hand):
         else:
             print("\n Please enter either 's' or 'h'")
             continue
+
+def show_some(player,dealer):
+    print("\nDealer's hand : ")
+    print('-',dealer.cards[1])
+    print("- <Hidden Card>")
+    print(f"Dealer's hand value : {values[dealer.cards[1].rank]} + ?")
+    print("\nPlayer's hand : ",*player.cards, sep = '\n- ')
+    player.hand_value("Player's")
+    
+
+def show_all(player,dealer):
+    print("\nPlayer's hand : ",*player.cards, sep = '\n- ')
+    player.hand_value("Player's")
+    print("\nDealer's hand : ",*dealer.cards, sep = '\n- ')
+    dealer.hand_value("Dealer's")
