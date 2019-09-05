@@ -83,3 +83,22 @@ def take_bet(chips):
                 continue
             else:
                 break
+
+def hit(deck,hand):
+    hand.add_card(deck.deal())
+    #hand.hand_value()
+
+def hit_or_stand(deck,hand):
+    global playing  # to control an upcoming while loop
+    while True:
+        res = input("\nDo you want to hit or stand? Enter 'h' or 's'")
+        if res[0].lower() == 'h':
+            hit(deck,hand)
+            break
+        elif res[0].lower() == 's':
+            print("\nPlayer stands. Dealer is playing")
+            playing = False
+            break
+        else:
+            print("\n Please enter either 's' or 'h'")
+            continue
