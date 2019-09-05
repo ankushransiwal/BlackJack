@@ -36,3 +36,24 @@ class Deck:
     def deal(self):
         single_card = self.deck.pop()
         return single_card
+
+class Hand:
+    def __init__(self):
+        self.cards = []  # start with an empty list as we did in the Deck class
+        self.value = 0   # start with zero value
+        self.aces = 0    # add an attribute to keep track of aces
+        
+    
+    def add_card(self,card):
+        self.cards.append(card)
+        self.value += values[card.rank]
+        
+    
+    def hand_value(self,name = 'Current'):
+        for card in self.cards:
+            if card.rank == 'Ace' and self.value >21:
+                self.value -= 10
+        print (f"{name} Hand value : {self.value}")
+    
+    def adjust_for_ace(self):
+        pass
