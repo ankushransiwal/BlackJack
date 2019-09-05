@@ -1,5 +1,12 @@
 # BlackJack
-Blackjack game in Python 3.7 using object oriented programming
+This program is designed to simulate one of the most popular card games to play, Blackjack. Its rules are simple, the play is thrilling, and there is definately room for strategy. 
+
+Play it in your terminal.
+
+1. Copy my code into your text editor.
+2. In your terminal or command line, type 'python filename.py' (where filename is whatever name you save my code as.
+3. Play the game.
+You may need to install Python3 if you don't have it on your computer.
 
 ## Output
 
