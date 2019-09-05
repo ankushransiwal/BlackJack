@@ -69,3 +69,17 @@ class Chips:
     
     def lose_bet(self):
         self.total -= self.bet
+
+def take_bet(chips):
+    
+    while True:
+        try:
+            chips.bet = int(input("How much money do you wanna bet?"))
+        except TypeError:
+            print("Please enter a number, Please try again")
+        else:
+            if chips.bet > chips.total:
+                print(f"You only have {chips.value} worth of chips, Please try again")
+                continue
+            else:
+                break
