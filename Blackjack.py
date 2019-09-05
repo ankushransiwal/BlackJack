@@ -117,3 +117,41 @@ def show_all(player,dealer):
     player.hand_value("Player's")
     print("\nDealer's hand : ",*dealer.cards, sep = '\n- ')
     dealer.hand_value("Dealer's")
+
+def player_busts(hand):
+    if hand.value > 21:
+        return True
+    else:
+        return False
+
+def player_wins(chips):
+    chips.win_bet()
+    print("\nPlayer wins, Congratulations")
+
+def dealer_wins(chips):
+    chips.lose_bet()
+    print("\nPlayer lost, Dealer wins. Better luck next time")
+    
+    
+def who_wins(player_hand,dealer_hand,chips):
+    if player_busts(player_hand):
+        print("\nPlayer is busted! Total hand exceeded 21")
+        dealer_wins(chips)
+    elif dealer_busts(dealer_hand):
+        print("\nDealer is busted! Total hand exceeded 21")
+        player_wins(chips)
+    elif dealer_hand.value < player_hand.value:
+        player_wins(chips)
+    elif dealer_hand.value > player_hand.value:
+        dealer_wins(chips)
+    else:
+        push()
+
+def dealer_busts(hand):
+    if hand.value > 21:
+        return True
+    else:
+        return False
+        
+def push():
+    print("\nDealer and Player tied! It's a PUSH")
